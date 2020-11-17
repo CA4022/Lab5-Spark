@@ -1,25 +1,25 @@
 # Apache Spark
 This lab will introduce the basics of Spark and guide you through installing and running spark-shell in local and Standalone mode in Scala and Python.
 
-* Download and test Scala:
+## Download and test Scala:
   - `$ wget ...`
   - `$ tar ... `
   - `$ scalac -version`
 
 [Scala MACOS](https://medium.com/@djamaldg/how-to-install-scala-on-macos-5771d55339cb)
 
-* Download and test Spark:
+## Download and test Spark:
   - `$ wget ...`
   - `$ tar ... `
   - Launch Spark shell `$ spark-shell `
   - Close Spark shekk `$ :q `
 
-
-* Run spark examples ([local mode](http://spark.apache.org/docs/latest/)):
+## Run spark examples ([local mode](http://spark.apache.org/docs/latest/)):
   - Scala:
   - Python:
 
-* Run spark example from spark-shell (Scala): let's try and run the toy example from spark RDD slides
+## Run spark example from spark-shell (Scala)
+Now let's try and run the toy example from spark RDD slides
   - Run spark shell in local mode: `$ spark-shell`
   - Use scala code from slides:
 
