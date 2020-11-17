@@ -17,7 +17,7 @@ This lab will introduce the basics of Spark and guide you through installing and
   - Scala:
   - Python:
   
-## Run Wordcount in local Standalone mode from Spark Shell
+## Run Wordcount in local Standalone mode from Spark Shell (Scala)
  * Run Spark master: `$ sbin/start-master.sh`
  * Check Spark master UI on browser at `localhost:8080`
  * Run Spark slave: `$ sbin/start-slave.sh <HOST:PORT.
@@ -31,11 +31,11 @@ This lab will introduce the basics of Spark and guide you through installing and
  [scala> counts.saveAsTextFile("output/");
  [scala> :q
 ```
+ * Verify output: `$ cat output/part-0000 `
+ * Run Wordcount in same mode but in Python as illustrated [here](https://www.tutorialkart.com/apache-spark/python-spark-shell-pyspark-example/)
 
-
-## Note: Run spark master
-Even when you are running spark on local mode (without Hadoop cluster running), you need to launch the spark master with the following command from the spark main directory:
-  - `$ sbin/start-master.sh`
+## Note: Local vs Standalone Spark cluster 
+We have said you can run Spark locally or on a distributed file system (Hadoop). Even when you are running spark locally (without Hadoop cluster running), you can either run it without a cluster (like when we run scala and python examples) or on standalone cluster mode, using spark cluster and no distributed file system. In this case (which is necessary for running examples such as wordcount) you need to launch the spark master and slave locally.
 
 
 [Linux/Unix](https://medium.com/@djamaldg/how-to-install-scala-on-macos-5771d55339cb)
