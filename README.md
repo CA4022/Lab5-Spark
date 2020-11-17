@@ -11,7 +11,7 @@ This lab will introduce the basics of Spark and guide you through installing and
   - Add to PATH: `$ export PATH=$PATH:$SCALA_HOME/bin 
   - Check scala version: `$ scala -version`
 
-<!-- Scala MACOS: https://medium.com/@djamaldg/how-to-install-scala-on-macos-5771d55339cb>
+<!-- Scala MACOS: https://medium.com/@djamaldg/how-to-install-scala-on-macos-5771d55339cb-->
 
 ## Download and test Spark:
   - Get sources:`$ wget https://www.apache.org/dyn/closer.lua/spark/spark-3.0.1/spark-3.0.1-bin-hadoop2.7.tgz`
