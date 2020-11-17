@@ -2,21 +2,31 @@
 This lab will introduce the basics of Spark and guide you through installing and running spark-shell in local and Standalone mode in Scala and Python.
 
 ## Download and test Scala:
-  - `$ wget ...`
-  - `$ tar ... `
-  - `$ scalac -version`
 
-[Scala MACOS](https://medium.com/@djamaldg/how-to-install-scala-on-macos-5771d55339cb)
+  - Get latest version on Ubuntu:  `$ sudo apt-get install scala`
+  - Alternatively you can get the sources: `$ wget https://downloads.lightbend.com/scala/2.12.3/scala-2.12.3.tar.gz`
+  - Unzip sources: `$ tar -xvzf scala-2.12.3.tar.gz `
+  - Move: `$ mv scala-2.12.3 /usr/local/scala`
+  - Set env. variable: `$ export SCALA_HOME="/usr/local/scala"`
+  - Add to PATH: `$ export PATH=$PATH:$SCALA_HOME/bin 
+  - Check scala version: `$ scala -version`
+
+<!-- Scala MACOS: https://medium.com/@djamaldg/how-to-install-scala-on-macos-5771d55339cb>
 
 ## Download and test Spark:
-  - `$ wget ...`
-  - `$ tar ... `
+  - Get sources:`$ wget https://www.apache.org/dyn/closer.lua/spark/spark-3.0.1/spark-3.0.1-bin-hadoop2.7.tgz`
+  - Unzip sources: `$ tar xzvf spark-3.0.1-bin-hadoop2.7.tgz`
+  - Move content into directory named spark: `$ mv spark-2.2.0-bin-hadoop2.7/ spark` 
+  - Move such directory into /usr/local: `$ sudo mv spark/ /usr/local/`
+  - Set env. variable: `$ export SPARK_HOME=/usr/local/spark`
+  - Add to PATH: `$ export PATH=$PATH:SPARK_HOME/bin`
   - Launch Spark shell `$ spark-shell `
   - Close Spark shekk `$ :q `
 
 ## Run spark examples ([local mode](http://spark.apache.org/docs/latest/)):
-  - Scala:
-  - Python:
+Spark comes with several sample programs. Scala, Java, Python and R examples are in the `examples/src/main` directory. 
+  - Scala: `$ run-example SparkPi 10`
+  - Python: `$ spark-submit examples/src/main/python/pi.py 10`
 
 ## Run spark example from spark-shell (Scala)
 Now let's try and run the toy example from spark RDD slides
