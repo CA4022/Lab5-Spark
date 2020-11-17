@@ -18,6 +18,20 @@ This lab will introduce the basics of Spark and guide you through installing and
 * Run spark examples ([local mode](http://spark.apache.org/docs/latest/)):
   - Scala:
   - Python:
+
+* Run spark example from spark-shell (Scala): let's try and run the toy example from spark RDD slides
+  - Run spark shell in local mode: `$ spark-shell`
+  - Use scala code from slides:
+
+```
+[scala> pets = sc.parallelize([("cat", 1), ("dog", 1), ("cat", 2)]);
+[scala> pets2 = pets.reduceByKey((x, y) -> x + y, 5);
+[scala> pets3 = pets.groupByKey();
+[scala> pets4 = pets.sortByKey();
+[scala> pets4.saveAsTextFile("output/");
+[scala> :q
+```
+  - Verify output: `$ cat output/part-0000 `
   
 ## Run Wordcount in local Standalone mode from Spark Shell (Scala)
  * Run Spark master: `$ sbin/start-master.sh`
