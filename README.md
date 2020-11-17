@@ -26,7 +26,7 @@ This lab will introduce the basics of Spark and guide you through installing and
 ## Run spark examples ([local mode](http://spark.apache.org/docs/latest/)):
 Spark comes with several sample programs. Scala, Java, Python and R examples are in the `examples/src/main` directory. 
   - Scala: `$ run-example SparkPi 10`
-  - Python: `$ spark-submit examples/src/main/python/pi.py 10`
+  - Python (need standalone spark cluster running): `$ spark-submit examples/src/main/python/pi.py 10`
 
 ## Run spark example from spark-shell (Scala)
 Now let's try and run the toy example from spark RDD slides
@@ -34,14 +34,13 @@ Now let's try and run the toy example from spark RDD slides
   - Use scala code from slides:
 
 ```
-[scala> pets = sc.parallelize([("cat", 1), ("dog", 1), ("cat", 2)]);
-[scala> pets2 = pets.reduceByKey((x, y) -> x + y, 5);
-[scala> pets3 = pets.groupByKey();
-[scala> pets4 = pets.sortByKey();
-[scala> pets4.saveAsTextFile("output/");
+[scala> val pets = sc.parallelize(List(("cat", 1), ("dog", 1), ("cat", 2)));
+[scala> val pets2 = pets.reduceByKey((x, y) => x + y);
+[scala> val pets4 = pets.sortByKey();
+[scala> pets4.saveAsTextFile("pet-output/");
 [scala> :q
 ```
-  - Verify output: `$ cat output/part-0000 `
+  - Verify output: `$ cat pet-output/part-0000 `
   
 ## Run Wordcount in local Standalone mode from Spark Shell (Scala)
  * Run Spark master: `$ sbin/start-master.sh`
@@ -59,11 +58,14 @@ Now let's try and run the toy example from spark RDD slides
 ```
  * Verify output: `$ cat output/part-0000 `
  * Run Wordcount in same mode but in Python as illustrated [here](https://www.tutorialkart.com/apache-spark/python-spark-shell-pyspark-example/)
+ * Run another example with pyspark [here](https://spark.apache.org/docs/latest/quick-start.html#basics)
 
 ## Note: Local vs Standalone Spark cluster 
 We have said you can run Spark locally or on a distributed file system (Hadoop). Even when you are running spark locally (without Hadoop cluster running), you can either run it without a cluster (like when we run scala and python examples) or on standalone cluster mode, using spark cluster and no distributed file system. In this case (which is necessary for running examples such as wordcount) you need to launch the spark master and slave locally.
 
 <!--MAC OS X
 https://www.tutorialkart.com/apache-spark/how-to-install-spark-on-mac-os/-->
+
+<!-- Spark wordcount example video: https://www.youtube.com/watch?v=HQTB3hlLD6E -->
 
 
