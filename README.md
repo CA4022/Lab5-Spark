@@ -62,7 +62,7 @@ Now let's try and run the toy example from spark RDD slides
  * Note 2: pyspark works with versions up to python 3.7, not supported in python 3.8 
  * Run another example with pyspark [here](https://spark.apache.org/docs/latest/quick-start.html#basics)
 
-## Note: Local vs Standalone Spark cluster 
+### Note: Local vs Standalone Spark cluster 
 We have said you can run Spark locally or on a distributed file system (Hadoop). Even when you are running spark locally (without Hadoop cluster running), you can either run it without a cluster (like when we run scala and python examples) or on standalone cluster mode, using spark cluster and no distributed file system. In this case (which is necessary for running examples such as wordcount) you need to launch the spark master and slave locally.
 
 <!--MAC OS X
