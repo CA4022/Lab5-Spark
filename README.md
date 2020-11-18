@@ -36,8 +36,8 @@ Now let's try and run the toy example from spark RDD slides
 ```
 [scala> val pets = sc.parallelize(List(("cat", 1), ("dog", 1), ("cat", 2)));
 [scala> val pets2 = pets.reduceByKey((x, y) => x + y);
-[scala> val pets4 = pets.sortByKey();
-[scala> pets4.saveAsTextFile("pet-output/");
+[scala> val pets3 = pets2.sortByKey();
+[scala> pets3.saveAsTextFile("pet-output/");
 [scala> :q
 ```
   - Verify output: `$ cat pet-output/part-0000 `
