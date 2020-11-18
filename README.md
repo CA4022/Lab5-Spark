@@ -7,8 +7,8 @@ This lab will introduce the basics of Spark and guide you through installing and
   - Alternatively you can get the sources: `$ wget https://downloads.lightbend.com/scala/2.12.3/scala-2.12.3.tar.gz`
   - Unzip sources: `$ tar -xvzf scala-2.12.3.tar.gz `
   - Move: `$ mv scala-2.12.3 /usr/local/scala`
-  - Set env. variable: `$ export SCALA_HOME="/usr/local/scala"`
-  - Add to PATH: `$ export PATH=$PATH:$SCALA_HOME/bin 
+  - Set env. variable: `$ export SCALA_HOME="/usr/local/scala" `
+  - Add to PATH: `$ export PATH=$PATH:$SCALA_HOME/bin `
   - Check scala version: `$ scala -version`
 
 <!-- Scala MACOS: https://medium.com/@djamaldg/how-to-install-scala-on-macos-5771d55339cb-->
