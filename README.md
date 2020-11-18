@@ -58,7 +58,7 @@ Now let's try and run the toy example from spark RDD slides
 ```
  * Verify output: `$ cat output/part-0000 `
  * Run Wordcount in same mode but in Python as illustrated [here](https://www.tutorialkart.com/apache-spark/python-spark-shell-pyspark-example/)
- * Note 1: use `$quit()` to exit the pyspark shell
+ * Note 1: use `$ quit()` to exit the pyspark shell
  * Note 2: pyspark works with versions up to python 3.7, not supported in python 3.8 
  * Run another example with pyspark [here](https://spark.apache.org/docs/latest/quick-start.html#basics)
 
