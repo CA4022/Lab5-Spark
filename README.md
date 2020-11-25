@@ -73,5 +73,5 @@ https://www.tutorialkart.com/apache-spark/how-to-install-spark-on-mac-os/-->
  * Follow the simple example for self-contained application [here](https://spark.apache.org/docs/latest/quick-start.html#basics).
  * Note: the examples are using SparkSession instead of SparkContext. SparkSession (also available from the spark shell) unifies all Spark functionalities (SparkSQL, SparStreaming, ...) including those available in SparkContext (SparkCore). It prevents you from having to create different SparkContext for different groups of functionalities.
 
-## Additional links, blogs, resources:
+## Additional links, blogs, resources (this is a fast evolving section)
  * [Hadoop and Spark common errors, April 2020](https://medium.com/analytics-vidhya/9-issues-ive-encountered-when-setting-up-a-hadoop-spark-cluster-for-the-first-time-87b023624a43)
