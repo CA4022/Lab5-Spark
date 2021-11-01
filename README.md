@@ -11,7 +11,10 @@ This lab will introduce the basics of Spark and guide you through installing and
   - Add to PATH: `$ export PATH=$PATH:$SCALA_HOME/bin `
   - Check scala version: `$ scala -version`
 
-Mac OSX users can get scala as indicated [here](https://medium.com/@djamaldg/how-to-install-scala-on-macos-5771d55339cb)
+Mac OSX users can get Scala as indicated [here](https://www.scala-lang.org/download/) in one of the following ways:
+ - geetting the binaries for MacOS
+ - using homebries (scala 3 is installed by default)
+ - installing specific versions (to install scala 2.12.X)
 
 
 ## Download and test Spark:
