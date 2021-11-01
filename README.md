@@ -11,17 +11,30 @@ This lab will introduce the basics of Spark and guide you through installing and
   - Add to PATH: `$ export PATH=$PATH:$SCALA_HOME/bin `
   - Check scala version: `$ scala -version`
 
-<!-- Scala MACOS: https://medium.com/@djamaldg/how-to-install-scala-on-macos-5771d55339cb-->
+Mac OSX users can get scala as indicated [here](https://medium.com/@djamaldg/how-to-install-scala-on-macos-5771d55339cb)
+
 
 ## Download and test Spark:
-  - Get sources:`$ wget https://www.apache.org/dyn/closer.lua/spark/spark-3.0.1/spark-3.0.1-bin-hadoop2.7.tgz`
-  - Unzip sources: `$ tar xzvf spark-3.0.1-bin-hadoop2.7.tgz`
-  - Move content into directory named spark: `$ mv spark-2.2.0-bin-hadoop2.7/ spark` 
+
+Unix users can get Spark as indicated below:
+
+  - Get sources:`$ wget https://www.apache.org/dyn/closer.lua/spark/spark-3.2.0/spark-3.2.0-bin-hadoop3.2.tgz`
+  - Unzip sources: `$ tar xzvf spark-3.2.0-bin-hadoop3.2.tgz`
+  - Move content into directory named spark: `$ mv spark-3.2.0-bin-hadoop3.2/ spark` 
   - Move such directory into /usr/local: `$ sudo mv spark/ /usr/local/`
   - Set env. variable: `$ export SPARK_HOME=/usr/local/spark`
   - Add to PATH: `$ export PATH=$PATH:SPARK_HOME/bin`
   - Launch Spark shell `$ spark-shell `
   - Close Spark shekk `$ :q `
+
+WSL users can follow instructions [here](https://kontext.tech/column/spark/560/apache-spark-301-installation-on-linux-guide)
+
+MacOSX users can follow instructions [here](https://www.tutorialkart.com/apache-spark/how-to-install-spark-on-mac-os/
+<!-- Spark wordcount example video: https://www.youtube.com/watch?v=HQTB3hlLD6E -->)
+
+## Note on versioning
+The suggested version of Scala is 2.12.
+The recommended version is to use Spark 3.2.0 (last release) pre-built for Apache Hadoop 3.3 and later.
 
 ## Run spark examples ([local mode](http://spark.apache.org/docs/latest/)):
 Spark comes with several sample programs. Scala, Java, Python and R examples are in the `examples/src/main` directory. 
@@ -48,7 +61,7 @@ Now let's try and run the toy example from spark RDD slides
  * Run Spark slave: `$ sbin/start-slave.sh <HOST:PORT> `
  * Locate a textfile in your Spark home directory (e.g. README.md)
  * Launch interactive spark shell, using the master in local mode, with 4 threads for wordcount: `$ spark-shell --master "local[4]" `
- * Use Scala code for wordcount: <!--https://www.tutorialkart.com/apache-spark/scala-spark-shell-example/-->
+ * Use Scala code for wordcount:
 
  ```
  [scala> var map = sc.textFile("README.md").flatMap(line => line.split(" ")).map(word => (word,1));
@@ -62,12 +75,12 @@ Now let's try and run the toy example from spark RDD slides
  * Note 2: pyspark works with versions up to python 3.7, not supported in python 3.8 
  * Run another example with pyspark [here](https://spark.apache.org/docs/latest/quick-start.html#basics)
 
+See also example [here](https://www.tutorialkart.com/apache-spark/scala-spark-shell-example/)
+
 ### Note: Local vs Standalone Spark cluster 
 We have said you can run Spark locally or on a distributed file system (Hadoop). Even when you are running spark locally (without Hadoop cluster running), you can either run it without a cluster (like when we run scala and python examples) or on standalone cluster mode, using spark cluster and no distributed file system. In this case (which is necessary for running examples such as wordcount) you need to launch the spark master and slave locally.
 
-<!--MAC OS X
-https://www.tutorialkart.com/apache-spark/how-to-install-spark-on-mac-os/-->
-<!-- Spark wordcount example video: https://www.youtube.com/watch?v=HQTB3hlLD6E -->
+
 
 ## Running SPARK from your Java/Python program
  * Follow the simple example for self-contained application [here](https://spark.apache.org/docs/latest/quick-start.html#basics).
