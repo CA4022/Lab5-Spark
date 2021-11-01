@@ -4,9 +4,9 @@ This lab will introduce the basics of Spark and guide you through installing and
 ## Download and test Scala:
 
   - Get latest version on Ubuntu:  `$ sudo apt-get install scala`
-  - Alternatively you can get the sources: `$ wget https://downloads.lightbend.com/scala/2.12.3/scala-2.12.3.tar.gz`
-  - Unzip sources: `$ tar -xvzf scala-2.12.3.tar.gz `
-  - Move: `$ mv scala-2.12.3 /usr/local/scala`
+  - Alternatively you can get the sources: `$ wget https://downloads.lightbend.com/scala/2.12.15/scala-2.12.15.tar.gz`
+  - Unzip sources: `$ tar -xvzf scala-2.12.15.tar.gz `
+  - Move: `$ mv scala-2.12.15 /usr/local/scala`
   - Set env. variable: `$ export SCALA_HOME="/usr/local/scala" `
   - Add to PATH: `$ export PATH=$PATH:$SCALA_HOME/bin `
   - Check scala version: `$ scala -version`
@@ -36,7 +36,7 @@ MacOSX users can follow instructions [here](https://www.tutorialkart.com/apache-
 <!-- Spark wordcount example video: https://www.youtube.com/watch?v=HQTB3hlLD6E -->)
 
 ## Note on versioning
-The suggested version of Scala is 2.12.
+The suggested version of Scala is 2.12.X (2.12.15 in the example above)
 The recommended version is to use Spark 3.2.0 (last release) pre-built for Apache Hadoop 3.3 and later.
 
 ## Run spark examples ([local mode](http://spark.apache.org/docs/latest/)):
