@@ -30,10 +30,12 @@ Unix users can get Spark as indicated below:
   - Launch Spark shell `$ spark-shell `
   - Close Spark shekk `$ :q `
 
-WSL users can follow instructions [here](https://kontext.tech/column/spark/560/apache-spark-301-installation-on-linux-guide)
+WSL users can follow instructions [here](https://kontext.tech/column/spark/560/apache-spark-301-installation-on-linux-guide). Do not forget to set your environmental variables accordingly!
 
-MacOSX users can follow instructions [here](https://www.tutorialkart.com/apache-spark/how-to-install-spark-on-mac-os/)
+MacOSX users can follow instructions [here](https://www.tutorialkart.com/apache-spark/how-to-install-spark-on-mac-os/).
+Do not forget to set your environmental variables accordingly!
 <!-- Spark wordcount example video: https://www.youtube.com/watch?v=HQTB3hlLD6E -->
+
 
 ## Note on versioning
 The suggested version of Scala is 2.12.X (2.12.15 in the example above)
