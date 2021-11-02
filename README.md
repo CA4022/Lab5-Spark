@@ -26,7 +26,7 @@ Unix users can get Spark as indicated below:
   - Move content into directory named spark: `$ mv spark-3.2.0-bin-hadoop3.2/ spark` 
   - Move such directory into /usr/local: `$ sudo mv spark/ /usr/local/`
   - Set env. variable: `$ export SPARK_HOME=/usr/local/spark`
-  - Add to PATH: `$ export PATH=$PATH:SPARK_HOME/bin`
+  - Add to PATH: `$ export PATH=$PATH:$SPARK_HOME/bin`
   - Launch Spark shell `$ spark-shell `
   - Close Spark shekk `$ :q `
 
