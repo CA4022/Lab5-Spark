@@ -22,7 +22,7 @@ Mac OSX users can get Scala as indicated [here](https://www.scala-lang.org/downl
 Unix users can get Spark as indicated below:
 
   - Get sources:`$ wget https://www.apache.org/dyn/closer.lua/spark/spark-3.2.0/spark-3.2.0-bin-hadoop3.2.tgz`
-  - Unzip sources: `$ tar xzvf spark-3.2.0-bin-hadoop3.2.tgz`
+  - Unzip sources: `$ tar -xzvf spark-3.2.0-bin-hadoop3.2.tgz`
   - Move content into directory named spark: `$ mv spark-3.2.0-bin-hadoop3.2/ spark` 
   - Move such directory into /usr/local: `$ sudo mv spark/ /usr/local/`
   - Set env. variable: `$ export SPARK_HOME=/usr/local/spark`
