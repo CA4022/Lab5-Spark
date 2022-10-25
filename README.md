@@ -46,7 +46,7 @@ The recommended version is to use Spark 3.2.0 (last release) pre-built for Apach
 ## Run spark examples ([local mode](http://spark.apache.org/docs/latest/)):
 Spark comes with several sample programs. Scala, Java, Python and R examples are in the `examples/src/main` directory. 
   - Scala: `$ run-example SparkPi 10`
-  - Python (need standalone spark cluster running): `$ spark-submit examples/src/main/python/pi.py 10`
+  - Python (need standalone spark cluster running, see Wordcount example below): `$ spark-submit examples/src/main/python/pi.py 10`
 
 ## Run spark example from spark-shell (Scala)
 Now let's try and run the toy example from spark RDD slides
