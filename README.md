@@ -40,7 +40,7 @@ Do not forget to set your environmental variables accordingly!
 
 
 ## Note on versioning
-The suggested version of Scala is 2.12.X (2.12.15 in the example above)
+The suggested version of Scala is 2.13.X, but there should be very little compatibility issues with Scala 3
 The recommended version is to use Spark 3.2.0 (last release) pre-built for Apache Hadoop 3.3 and later.
 
 ## Run spark examples ([local mode](http://spark.apache.org/docs/latest/)):
