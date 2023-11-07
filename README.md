@@ -13,7 +13,7 @@ This lab will introduce the basics of Spark and guide you through installing and
 
 Mac OSX users can get Scala as indicated [here](https://www.scala-lang.org/download/) in one of the following ways:
  - geetting the binaries for MacOS
- - Note that using homebrew will automatically install the latest version (scala 3.2 should be current one)
+ - Note that using homebrew will automatically install the latest version (scala 3.2 or 2.13 are the current stable ones but it is advisable to install 2.13 or 2.12)
  - To installing a specific versions:
     -- `$ brew search scala ` (to show available versions)
     -- `$ brew install scala@2.13 ` (to install version 2.13 which has no compatibility issues with Spark 3.2.0 )
