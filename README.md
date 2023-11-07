@@ -96,7 +96,7 @@ We have said you can run Spark locally or on a distributed file system (Hadoop).
 
 
 ## Running SPARK from your Java/Python program
- * Follow the simple example under "Self-Contained Spplication" section [here](https://spark.apache.org/docs/latest/quick-start.html#basics).
+ * Follow the simple example under "Self-Contained Application" section [here](https://spark.apache.org/docs/latest/quick-start.html#basics).
  * Note: the examples are using SparkSession instead of SparkContext. SparkSession (also available from the spark shell) unifies all Spark functionalities (SparkSQL, SparStreaming, ...) including those available in SparkContext (SparkCore). It prevents you from having to create different SparkContext for different groups of functionalities.
 
 ## Additional links, blogs, resources (this is a fast evolving section)
