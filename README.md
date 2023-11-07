@@ -32,6 +32,7 @@ Unix users can get Spark as indicated below:
   - Launch Spark shell `$ spark-shell `
   - Close Spark shekk `$ :q `
 
+
 WSL users can follow instructions [here](https://kontext.tech/column/spark/560/apache-spark-301-installation-on-linux-guide). Do not forget to set your environmental variables accordingly!
 
 MacOSX users can follow instructions [here](https://www.tutorialkart.com/apache-spark/how-to-install-spark-on-mac-os/).
@@ -61,7 +62,12 @@ Now let's try and run the toy example from spark RDD slides
 [scala> :q
 ```
   - Verify output: `$ cat pet-output/part-0000 `
-  
+
+Note:
+  - Before exiting the shell you can visualise the content of an RDD as follows:
+  - `RDDname.take(n).foreach(println)` or `RDDname.collect().foreach(println)`
+  - The first is better for big RDDs
+    
 ## Run Wordcount in local Standalone mode from Spark Shell (Scala)
  * Run Spark master: `$ sbin/start-master.sh`
  * Check Spark master UI on browser at `localhost:8080`
