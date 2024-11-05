@@ -4,16 +4,16 @@ This lab will introduce the basics of Spark and guide you through installing and
 ## Download and test Scala:
 
   - Get latest version on Ubuntu:  `$ sudo apt-get install scala`
-  - Alternatively you can get the sources: `$ wget https://downloads.lightbend.com/scala/2.12.15/scala-2.12.15.tgz`
-  - Unzip sources: `$ tar -xvzf scala-2.12.15.tgz `
-  - Move: `$ mv scala-2.12.15 /usr/local/scala`
+  - Alternatively you can get the sources: `$ wget https://downloads.lightbend.com/scala/2.13.15/scala-2.13.15.tgz`
+  - Unzip sources: `$ tar -xvzf scala-2.13.15.tgz `
+  - Move: `$ mv scala-2.13.15 /usr/local/scala`
   - Set env. variable: `$ export SCALA_HOME="/usr/local/scala" `
   - Add to PATH: `$ export PATH=$PATH:$SCALA_HOME/bin `
   - Check scala version: `$ scala -version`
 
 Mac OSX users can get Scala as indicated [here](https://www.scala-lang.org/download/) in one of the following ways:
- - geetting the binaries for MacOS
- - Note that using homebrew will automatically install the latest version (scala 3.2 or 2.13 are the current stable ones but it is advisable to install 2.13 or 2.12)
+ - getting the binaries for MacOS
+ - Note that using homebrew will automatically install the latest version (scala 3.2 or 2.13 are the current stable ones but it is advisable to install 2.13)
  - To installing a specific versions:
     -- `$ brew search scala ` (to show available versions)
     -- `$ brew install scala@2.13 ` (to install version 2.13 which has no compatibility issues with Spark 3.2.0 )
@@ -23,26 +23,27 @@ Mac OSX users can get Scala as indicated [here](https://www.scala-lang.org/downl
 
 Unix users can get Spark as indicated below:
 
-  - Get sources:`$ wget https://www.apache.org/dyn/closer.lua/spark/spark-3.2.0/spark-3.2.0-bin-hadoop3.2.tgz`
-  - Unzip sources: `$ tar -xzvf spark-3.2.0-bin-hadoop3.2.tgz`
-  - Move content into directory named spark: `$ mv spark-3.2.0-bin-hadoop3.2/ spark` 
+  - Get sources:`$ wget https://dlcdn.apache.org/spark/spark-3.4.4/spark-3.4.4-bin-hadoop3.tgz`
+  - Unzip sources: `$ tar -xzvf spark-3.4.4-bin-hadoop3.tgz`
+  - Move content into directory named spark: `$ mv spark-3.4.4-bin-hadoop3/ spark` 
   - Move such directory into /usr/local: `$ sudo mv spark/ /usr/local/`
   - Set env. variable: `$ export SPARK_HOME=/usr/local/spark`
   - Add to PATH: `$ export PATH=$PATH:$SPARK_HOME/bin`
   - Launch Spark shell `$ spark-shell `
   - Close Spark shekk `$ :q `
 
+Alternatively check previous versions at `https://archive.apache.org/dist/spark/`
 
 WSL users can follow instructions [here](https://kontext.tech/column/spark/560/apache-spark-301-installation-on-linux-guide). Do not forget to set your environmental variables accordingly!
 
-MacOSX users can follow instructions [here](https://www.tutorialkart.com/apache-spark/how-to-install-spark-on-mac-os/).
+MacOSX users can check similar instructions [here](https://kontext.tech/article/596/apache-spark-301-installation-on-macos).
 Do not forget to set your environmental variables accordingly!
 <!-- Spark wordcount example video: https://www.youtube.com/watch?v=HQTB3hlLD6E -->
 
 
 ## Note on versioning
 The suggested version of Scala is 2.13.X, but there should be very little compatibility issues with Scala 3
-The recommended version is to use Spark 3.2.0 (last release) pre-built for Apache Hadoop 3.3 and later.
+The recommended version is to use Spark 3.4.4 (last release) pre-built for Apache Hadoop 3 and later.
 
 ## Run spark examples ([local mode](http://spark.apache.org/docs/latest/)):
 Spark comes with several sample programs. Scala, Java, Python and R examples are in the `examples/src/main` directory. 
